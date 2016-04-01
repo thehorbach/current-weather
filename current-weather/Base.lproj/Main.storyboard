@@ -88,6 +88,11 @@
                             <constraint firstAttribute="trailing" secondItem="c9K-HT-eSB" secondAttribute="trailing" id="ri4-vV-uRi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lastUpdated" destination="4Gr-i2-sLS" id="NWL-pD-xrf"/>
+                        <outlet property="txtDesc" destination="Tvu-y5-GmF" id="cst-4J-7k0"/>
+                        <outlet property="weatherLbl" destination="S3C-XW-yvp" id="wmy-Qf-ftM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
