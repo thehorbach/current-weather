@@ -13,10 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherLbl: UILabel!
     @IBOutlet weak var txtDesc: UILabel!
     @IBOutlet weak var lastUpdated: UILabel!
-
+    
+    var londonWeather = WeatherCurrent()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        londonWeather.downloadCurrentWeather { () -> () in
+            // do work after completion
+        } 
     }
 }
 
