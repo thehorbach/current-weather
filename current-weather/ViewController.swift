@@ -18,12 +18,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+
         londonWeather.downloadCurrentWeather { () -> () in
-            // do work after completion
+            self.updateUI()
         } 
+    }
+    
+    func updateUI() {
+        let sign = "\(self.londonWeather.temperature)°"
+        weatherLbl.text = sign
+        
+        let anotherSign = "Last Checked: \(self.londonWeather.lastUpdated)"
+        lastUpdated.text = anotherSign
+        
+        txtDesc.text = self.londonWeather.txtDesc.capitalizedString
     }
 }
 

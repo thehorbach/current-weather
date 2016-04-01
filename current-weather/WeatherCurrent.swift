@@ -55,8 +55,8 @@ class WeatherCurrent {
                     if let firstItem = listOfProperties[0] as? Dictionary<String, AnyObject> {
                         
                         //parse current temperature
-                        if let temperature = firstItem["main"]?["temp"] as? Int {
-                            self._temperature = String(temperature)
+                        if let temperature = firstItem["main"]?["temp"] as? Double {
+                            self._temperature = String(round((temperature - 275.15)*10)/10)
                             
                         }
                         
